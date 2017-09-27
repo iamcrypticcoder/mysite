@@ -1,0 +1,11 @@
+email: mahbub.kuet@gmail.com
+fullname: 'Kazi Mahbubur'
+title: Rahman
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$4j96UIFLUv8b5lN69tV92.af/8NiJZcYYKE8eefVVstNvNilbu2o2
