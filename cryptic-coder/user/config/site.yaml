@@ -3,12 +3,12 @@ default_lang: en
 author:
   name: 'Cryptic Coder'
   email: mahbub.kuet@gmail.com
-  copyright: 'Copyright 2013 Deliver. All Rights Reserved.'
+  copyright: 'Contact Me: iamcrypticcoder@gmail.com'
 taxonomies:
   - category
   - tag
 metadata:
-  description: 'My Deliver Site'
+  description: 'Cryptic Coder'
 summary:
   enabled: true
   format: short
@@ -25,7 +25,7 @@ social:
     url: 'https://twitter.com/getgrav'
     icon: twitter
   -
-    url: '#'
+    url: 'https://www.facebook.com/cryptic.coder'
     icon: facebook
   -
     url: blog.rss
@@ -40,34 +40,20 @@ contact:
       line: 'Canada S7K 2N5'
   gps: 1.306.222.3456
 othermenu:
-  -
-    text: About
-    url: about
-  -
-    text: 'Privacy Policy'
-    url: '#'
-  -
-    text: Contact
-    url: contact
+
 quicklinks:
   -
-    text: Portfolio
-    url: 'base_url:portfolio'
+    text: Amazon Web Service
+    url: 'base_url:aws'
   -
-    text: About
-    url: 'base_url:about'
+    text: Algorithms
+    url: 'base_url:algorithms'
   -
-    text: Services
-    url: 'base_url:services'
+    text: Mathematics
+    url: 'base_url:mathematics'
   -
-    text: Archive
-    url: 'base_url:archive'
-  -
-    text: Blog
-    url: 'base_url:blog'
-  -
-    text: 'Contact Us'
-    url: 'base_url:contact'
+    text: UVA Solution
+    url: 'base_url:uva solution'
 header_options:
   arrows: 'false'
   autoslide: 'false'
@@ -79,10 +65,10 @@ header_options:
   touch: 'true'
   swipe: 'true'
 footer:
-  description: 'This is footer description'
+  description: ''
   contact_title: 'Contact Info'
   links_title: 'Quick Links'
   newsletter_title: Newsletter
-  newsletter_description: 'Etiam porta sem malesuada magna mollis euismod.'
-  copyright_text: 'Copyright 2013 Deliver. All Rights Reserved.'
+  newsletter_description: 'Enter your email address to subscribe to this blog and receive notifications of new posts by email.'
+  copyright_text: ''
   feedburner: ''

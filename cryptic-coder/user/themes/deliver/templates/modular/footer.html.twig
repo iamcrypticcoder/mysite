@@ -12,6 +12,7 @@
                 <p>{{ site.footer.description }}</p>
             {% endif %}
         </div>
+        <!--
         <div class="footer-module"><h4>{{ site.footer.contact_title }}</h4>
             <p>
                 {% for item in site.contact.address %}
@@ -21,13 +22,21 @@
             <p>{{ site.author.email }}</p>
             <p><strong>{{ site.contact.gps }}</strong></p>
         </div>
+        -->
         <div class="footer-module"><h4>{{ site.footer.links_title }}</h4>
-         <ul class="quickmenu">
+            <ul class="quickmenu">
+                {% for module in site.quicklinks %}
+                    <li><i class="fa fa-chevron-right"></i><a href="{% if "base_url:" in module.url %}{{ base_url_absolute }}/{{ module.url|replace({"base_url:": ""}) }}{% else %}{{ module.url }}{% endif %}">{{  module.text }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="footer-module"><h4>{{ site.footer.links_title }}</h4>
+        <ul class="quickmenu">
             {% for module in site.quicklinks %}
                 <li><i class="fa fa-chevron-right"></i><a href="{% if "base_url:" in module.url %}{{ base_url_absolute }}/{{ module.url|replace({"base_url:": ""}) }}{% else %}{{ module.url }}{% endif %}">{{  module.text }}</a></li>
             {% endfor %}
         </ul>
-    </div>
+        </div>
     <div class="footer-module">
         <h4>{{ site.footer.newsletter_title }}</h4>
         <p>{{ site.footer.newsletter_description }}</p>
@@ -40,7 +49,7 @@
         </form>
     </div>
 </div>
-<hr>
+    <hr />
 <div class="footer-modules">
     <div class="footer-copyright">
         {{ site.author.copyright }}
@@ -53,4 +62,5 @@
     </ul>
     </div>
 </div>
+
 </div>
