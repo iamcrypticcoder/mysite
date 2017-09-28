@@ -74,16 +74,16 @@ b, strong, label, th {
   transition: all 0.5s ease; }
 
 .padding-horiz, .fullwidth #header, .fullwidth #breadcrumbs, .fullwidth .blog-header, .fullwidth .blog-content-item, .fullwidth .content-wrapper, .fullwidth ul.pagination, .fullwidth #body > .modular-row, #body, #header, .footer {
-  padding-left: 14rem;
-  padding-right: 14rem; }
+  padding-left: 6rem;
+  padding-right: 6rem; }
   @media only all and (min-width: 60em) and (max-width: 74.938em) {
     .padding-horiz, .fullwidth #header, .fullwidth #breadcrumbs, .fullwidth .blog-header, .fullwidth .blog-content-item, .fullwidth .content-wrapper, .fullwidth ul.pagination, .fullwidth #body > .modular-row, #body, #header, .footer {
-      padding-left: 7rem;
-      padding-right: 7rem; } }
+      padding-left: 3rem;
+      padding-right: 3rem; } }
   @media only all and (min-width: 48em) and (max-width: 59.938em) {
     .padding-horiz, .fullwidth #header, .fullwidth #breadcrumbs, .fullwidth .blog-header, .fullwidth .blog-content-item, .fullwidth .content-wrapper, .fullwidth ul.pagination, .fullwidth #body > .modular-row, #body, #header, .footer {
-      padding-left: 7rem;
-      padding-right: 7rem; } }
+      padding-left: 3rem;
+      padding-right: 3rem; } }
   @media only all and (max-width: 47.938em) {
     .padding-horiz, .fullwidth #header, .fullwidth #breadcrumbs, .fullwidth .blog-header, .fullwidth .blog-content-item, .fullwidth .content-wrapper, .fullwidth ul.pagination, .fullwidth #body > .modular-row, #body, #header, .footer {
       padding-left: 1rem;
@@ -277,8 +277,8 @@ b, strong, label, th {
   padding-left: 0;
   padding-right: 0; }
   .header-image.fullwidth #body > .listing-row {
-    padding-left: 14rem;
-    padding-right: 14rem; }
+    padding-left: 6rem;
+    padding-right: 6rem; }
 .header-image .listing-row:last-child {
   margin-bottom: 2rem; }
 .header-image #body .flush-top {
@@ -595,7 +595,6 @@ code {
   color: #9c1d3d; }
 
 pre {
-  padding: 2rem;
   background: #f6f6f6;
   border: 1px solid #CBCBCB;
   border-radius: 3px; }
@@ -702,7 +701,7 @@ td {
       width: 100%; } }
 
 .three-column-bullet {
-  width: 33.33333%; }
+  width: 33.3333333333%; }
   @media only all and (max-width: 47.938em) {
     .three-column-bullet {
       width: 100%; } }
@@ -881,10 +880,10 @@ td {
       display: block;
       margin-top: 1rem;
       border-radius: 0; }
-  .list-item .list-blog-date, .list-item .list-blog-author {
+  .list-item .list-blog-date, .list-item .list-blog-author, .list-item .list-blog-tag {
     text-align: center;
     background-color: rgba(101, 97, 97, 0.1);
-    padding: 0.7rem 1rem;
+    padding: 0.5rem 1rem;
     margin-bottom: 0.2rem;
     margin-right: 0.5rem;
     font-size: 1rem;
@@ -892,12 +891,12 @@ td {
     color: #9A9898;
     font-family: "novecento_sans_widedemibold", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; }
     @media only all and (min-width: 48em) and (max-width: 59.938em) {
-      .list-item .list-blog-date, .list-item .list-blog-author {
+      .list-item .list-blog-date, .list-item .list-blog-author, .list-item .list-blog-tag {
         display: block;
         width: 100%;
         clear: both; } }
     @media only all and (max-width: 47.938em) {
-      .list-item .list-blog-date, .list-item .list-blog-author {
+      .list-item .list-blog-date, .list-item .list-blog-author, .list-item .list-blog-tag {
         display: block;
         width: 100%;
         clear: both; } }
@@ -910,7 +909,7 @@ td {
   padding: 0;
   display: inline;
   background-color: rgba(101, 97, 97, 0.1);
-  padding: 0.7rem 1rem;
+  padding: 0.5rem 1rem;
   margin-bottom: 0.2rem;
   list-style: none;
   text-align: center; }
@@ -1098,8 +1097,8 @@ ul.pagination {
   .modular .showcase h1 {
     font-size: 2.2rem;
     margin-top: 0;
-    padding-left: 14rem;
-    padding-right: 14rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
     text-transform: uppercase; }
     @media only all and (min-width: 48em) and (max-width: 59.938em) {
       .modular .showcase h1 {
@@ -1116,8 +1115,8 @@ ul.pagination {
       color: #87b672; }
   .modular .showcase h2 {
     text-transform: none;
-    padding-left: 14rem;
-    padding-right: 14rem; }
+    padding-left: 6rem;
+    padding-right: 6rem; }
     @media only all and (max-width: 47.938em) {
       .modular .showcase h2 {
         padding-left: 0;
@@ -1566,16 +1565,16 @@ ul.pagination {
     margin-top: 4rem; }
     .portfolio .notebooks .notebook-row {
       box-shadow: inset 0px -90px 0px -20px #f7f7f7;
-      margin-left: -14rem;
-      margin-right: -14rem;
-      padding-left: 14rem;
-      padding-right: 14rem;
+      margin-left: -6rem;
+      margin-right: -6rem;
+      padding-left: 6rem;
+      padding-right: 6rem;
       background: #EEEEEE;
       padding-bottom: 2rem; }
       @media only all and (max-width: 47.938em) {
         .portfolio .notebooks .notebook-row {
-          margin-left: -10rem;
-          margin-right: -10rem; } }
+          margin-left: -2rem;
+          margin-right: -2rem; } }
       .portfolio .notebooks .notebook-row .notebook {
         min-width: 24%; }
         @media only all and (min-width: 48em) and (max-width: 59.938em) {

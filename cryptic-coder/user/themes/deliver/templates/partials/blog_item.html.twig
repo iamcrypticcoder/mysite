@@ -28,6 +28,28 @@
             {{ page.header.author }}
         </span>
         {% endif %}
+
+        {% if page.taxonomy.tag %}
+            {% for tag in page.taxonomy.tag %}
+                <span class="list-blog-tag">
+                    <i class="fa fa-tag"></i>
+                    <a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
+                </span>
+            {% endfor %}
+        {% endif %}
+
+        <!--
+        {% if page.taxonomy.tag %}
+            {% for tag in page.taxonomy.tag %}
+                <ul class="tags">
+                    <i class="fa fa-tag"></i>
+                    <li><a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a></li>
+                </ul>
+            {% endfor %}
+        {% endif %}
+        -->
+
+        <!--
        {% if page.taxonomy.tag %}
         <ul class="tags">
             <i class="fa fa-tag"></i>
@@ -36,7 +58,7 @@
             {% endfor %}
         </ul>
         {% endif %}
-
+        -->
     </div>
 
     <div class="list-blog-padding">
