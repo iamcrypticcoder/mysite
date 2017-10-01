@@ -35,7 +35,7 @@
 // List Blog Item
 .list-item {
 
-    border-bottom: 1px solid darken($border-color, 8%);
+    border-bottom: 1px solid $border-color;
     margin-bottom: $padding-vert;
 
     &:last-child {
@@ -45,15 +45,16 @@
     .list-blog-header {
         position: relative;
         h4 {
-            text-align: left;
-            margin-bottom: 1.5rem;
+
+            margin-bottom: 0.5rem;
             a {
-                color: $light-gray;
+                color: $core-text;
                 &:hover {
                     color: $core-accent;
                 }
             }
         }
+
         img {
             display: block;
             margin-top: 1rem;
@@ -61,26 +62,20 @@
         }
     }
 
-    .list-blog-date, .list-blog-author {
+    .list-blog-date {
+        float: right;
         text-align: center;
-        background-color: transparentize($light-gray, 0.9);
-        padding: 0.5rem 1rem;
-        margin-bottom: 0.2rem;
-        margin-right: 0.5rem;
-        font-size: $core-font-size;
-        text-transform: uppercase;
-        color: $core-text;
-        font-family: $font-family-header;
-
-        @include breakpoint(tablet-range) {
+        span {
             display: block;
-            width: 100%;
-            clear: both;
+            font-size: 1.75rem;
+            font-weight: $font-weight-bold;
+            line-height: 110%;
         }
-        @include breakpoint(mobile-only) {
+        em {
             display: block;
-            width: 100%;
-            clear: both;
+            border-top: 1px solid $border-color;
+            font-style: normal;
+            text-transform: uppercase;
         }
     }
 }
@@ -128,7 +123,7 @@
             }
         }
         &:last-child {
-            a:after {display: none;} 
+            a:after {display: none;}
         }
     }
     @include breakpoint(tablet-range) {
@@ -146,19 +141,13 @@
 
 // Archives & Related-Pages
 .archives, .related-pages {
-    margin: 0;
     padding: 0;
     list-style: none;
     li {
+        border-bottom: 1px solid $border-color;
         line-height: $core-font-size + 1rem;
         &:last-child {
             border-bottom: 0;
-        }
-    }
-    a {
-        color: $core-text;
-        &:hover {
-            color: $core-accent;
         }
     }
 }
@@ -201,7 +190,6 @@ div#breadcrumbs {
     .sidebar-content {
         h4 {
             margin-bottom: 1rem;
-            text-align: left;
         }
         p, ul {
             margin-top: 1rem;

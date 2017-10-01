@@ -8,6 +8,5 @@ taxonomy:
     tag:
         - architecture
         - photography
-        - ''
 ---
 

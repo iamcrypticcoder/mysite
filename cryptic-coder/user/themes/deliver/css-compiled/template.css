@@ -8,10 +8,10 @@
   -o-transform: translateY(-50%);
   transform: translateY(-50%); }
 
-.button, .archive-list button, .contact button, .button-secondary {
+.button, .contact button, .button-secondary {
   display: inline-block;
   padding: 7px 20px; }
-  .button-small.button, .archive-list button.button-small, .contact button.button-small, .button-small.button-secondary {
+  .button-small.button, .contact button.button-small, .button-small.button-secondary {
     padding: 3px 10px;
     font-size: 0.9rem; }
 
@@ -68,7 +68,7 @@ b, strong, label, th {
   src: url("./fonts/Novecentosanswide-Medium-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/Novecentosanswide-Medium-webfont.woff2") format("woff2"), url("./fonts/Novecentosanswide-Medium-webfont.woff") format("woff"), url("./fonts/Novecentosanswide-Medium-webfont.ttf") format("truetype"), url("./fonts/Novecentosanswide-Medium-webfont.svg#novecento_sans_widemedium") format("svg");
   font-weight: normal;
   font-style: normal; }
-.default-animation, #body, .modal, .archive-list button, .modular .showcase .button, .modular .showcase .archive-list button, .archive-list .modular .showcase button, .modular .showcase .contact button, .contact .modular .showcase button, .modular .slideme_container .arrow, .modular .slideme_container .pagination .numbers li, .modular .bottom .button, .modular .bottom .archive-list button, .archive-list .modular .bottom button, .modular .bottom .contact button, .contact .modular .bottom button, .contact input, .contact textarea, .contact button, .callout .pricing-container .pricing-item, .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .foot, .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .archive-list button, .archive-list .callout .pricing-container .pricing-item .foot button, .callout .pricing-container .pricing-item .foot .contact button, .contact .callout .pricing-container .pricing-item .foot button, .team .members .social-icons li, .team .members .social-icons li a, .logo h3, .logo ul.social-icons li, .logo ul.social-icons li a, .notebook .screen .screen-content-hover {
+.default-animation, #body, .modal, .modular .showcase .button, .modular .showcase .contact button, .contact .modular .showcase button, .modular .slideme_container .arrow, .modular .slideme_container .pagination .numbers li, .modular .bottom .button, .modular .bottom .contact button, .contact .modular .bottom button, .contact input, .contact textarea, .contact button, .callout .pricing-container .pricing-item, .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .foot, .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .contact button, .contact .callout .pricing-container .pricing-item .foot button, .team .members .social-icons li, .team .members .social-icons li a, .logo h3, .logo ul.social-icons li, .logo ul.social-icons li a, .notebook .screen .screen-content-hover {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease; }
@@ -331,7 +331,7 @@ b, strong, label, th {
     clear: both; }
   .footer a {
     color: #444; }
-  .footer h4, .footer .archive-list label, .archive-list .footer label, .footer .modular .bottom table th, .modular .bottom table .footer th, .footer .contact label, .contact .footer label, .footer .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .footer .name, .footer .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .footer .button, .footer .callout .pricing-container .pricing-item .foot .archive-list button, .callout .pricing-container .pricing-item .foot .archive-list .footer button, .footer .archive-list .callout .pricing-container .pricing-item .foot button, .archive-list .callout .pricing-container .pricing-item .foot .footer button, .footer .callout .pricing-container .pricing-item .foot .contact button, .callout .pricing-container .pricing-item .foot .contact .footer button, .footer .contact .callout .pricing-container .pricing-item .foot button, .contact .callout .pricing-container .pricing-item .foot .footer button {
+  .footer h4, .footer .modular .bottom table th, .modular .bottom table .footer th, .footer .contact label, .contact .footer label, .footer .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .footer .name, .footer .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .footer .button, .footer .callout .pricing-container .pricing-item .foot .contact button, .callout .pricing-container .pricing-item .foot .contact .footer button, .footer .contact .callout .pricing-container .pricing-item .foot button, .contact .callout .pricing-container .pricing-item .foot .footer button {
     line-height: 2rem;
     margin-top: 0;
     text-align: left;
@@ -466,7 +466,7 @@ body {
   font-family: "Raleway", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
   font-weight: 400; }
 
-h1, h2, h3, h4, .archive-list label, .modular .bottom table th, .contact label, .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .archive-list button, .archive-list .callout .pricing-container .pricing-item .foot button, .callout .pricing-container .pricing-item .foot .contact button, .contact .callout .pricing-container .pricing-item .foot button, h5, h6 {
+h1, h2, h3, h4, .modular .bottom table th, .contact label, .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .contact button, .contact .callout .pricing-container .pricing-item .foot button, h5, h6 {
   font-family: "Montserrat", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
   text-rendering: optimizeLegibility; }
 
@@ -496,18 +496,12 @@ h2 {
   h3 {
     font-size: -1rem; } }
 
-h4, .archive-list label, .modular .bottom table th, .contact label, .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .archive-list button, .archive-list .callout .pricing-container .pricing-item .foot button, .callout .pricing-container .pricing-item .foot .contact button, .contact .callout .pricing-container .pricing-item .foot button {
-  font-size: 1.2rem;
-  font-weight: normal;
-  text-align: center;
-  text-transform: uppercase;
-  color: #656161; }
-  @media only all and (min-width: 48em) and (max-width: 59.938em) {
-    h4, .archive-list label, .modular .bottom table th, .contact label, .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .archive-list button, .archive-list .callout .pricing-container .pricing-item .foot button, .callout .pricing-container .pricing-item .foot .contact button, .contact .callout .pricing-container .pricing-item .foot button {
-      font-size: 1.35rem; } }
-  @media only all and (max-width: 47.938em) {
-    h4, .archive-list label, .modular .bottom table th, .contact label, .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .archive-list button, .archive-list .callout .pricing-container .pricing-item .foot button, .callout .pricing-container .pricing-item .foot .contact button, .contact .callout .pricing-container .pricing-item .foot button {
-      font-size: 1.25rem; } }
+@media only all and (min-width: 48em) and (max-width: 59.938em) {
+  h4, .modular .bottom table th, .contact label, .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .contact button, .contact .callout .pricing-container .pricing-item .foot button {
+    font-size: 1.35rem; } }
+@media only all and (max-width: 47.938em) {
+  h4, .modular .bottom table th, .contact label, .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .contact button, .contact .callout .pricing-container .pricing-item .foot button {
+    font-size: 1.25rem; } }
 
 h1 {
   text-align: center;
@@ -664,14 +658,14 @@ td {
   padding: 0.5rem;
   border: 1px solid #d8d8d8; }
 
-.button, .archive-list button, .contact button {
+.button, .contact button {
   background: #1BB3E9;
   color: #fff;
   border: 1px solid #1BB3E9; }
-  .button:hover, .archive-list button:hover, .contact button:hover {
+  .button:hover, .contact button:hover {
     background: #fff;
     color: #1BB3E9; }
-  .button:active, .archive-list button:active, .contact button:active {
+  .button:active, .contact button:active {
     box-shadow: 0 1px 0 #118ab5; }
 
 .button-secondary {
@@ -863,43 +857,35 @@ td {
     padding-top: 3rem; }
 
 .list-item {
-  border-bottom: 1px solid #dadada;
+  border-bottom: 1px solid #EEEEEE;
   margin-bottom: 3rem; }
   .list-item:last-child {
     border-bottom: 0; }
   .list-item .list-blog-header {
     position: relative; }
-    .list-item .list-blog-header h4, .list-item .list-blog-header .archive-list label, .archive-list .list-item .list-blog-header label, .list-item .list-blog-header .modular .bottom table th, .modular .bottom table .list-item .list-blog-header th, .list-item .list-blog-header .contact label, .contact .list-item .list-blog-header label, .list-item .list-blog-header .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .list-item .list-blog-header .name, .list-item .list-blog-header .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .list-item .list-blog-header .button, .list-item .list-blog-header .callout .pricing-container .pricing-item .foot .archive-list button, .callout .pricing-container .pricing-item .foot .archive-list .list-item .list-blog-header button, .list-item .list-blog-header .archive-list .callout .pricing-container .pricing-item .foot button, .archive-list .callout .pricing-container .pricing-item .foot .list-item .list-blog-header button, .list-item .list-blog-header .callout .pricing-container .pricing-item .foot .contact button, .callout .pricing-container .pricing-item .foot .contact .list-item .list-blog-header button, .list-item .list-blog-header .contact .callout .pricing-container .pricing-item .foot button, .contact .callout .pricing-container .pricing-item .foot .list-item .list-blog-header button {
-      text-align: left;
-      margin-bottom: 1.5rem; }
-      .list-item .list-blog-header h4 a, .list-item .list-blog-header .archive-list label a, .archive-list .list-item .list-blog-header label a, .list-item .list-blog-header .modular .bottom table th a, .modular .bottom table .list-item .list-blog-header th a, .list-item .list-blog-header .contact label a, .contact .list-item .list-blog-header label a, .list-item .list-blog-header .callout .pricing-container .pricing-item .name a, .callout .pricing-container .pricing-item .list-item .list-blog-header .name a, .list-item .list-blog-header .callout .pricing-container .pricing-item .foot .button a, .callout .pricing-container .pricing-item .foot .list-item .list-blog-header .button a, .list-item .list-blog-header .callout .pricing-container .pricing-item .foot .archive-list button a, .callout .pricing-container .pricing-item .foot .archive-list .list-item .list-blog-header button a, .list-item .list-blog-header .archive-list .callout .pricing-container .pricing-item .foot button a, .archive-list .callout .pricing-container .pricing-item .foot .list-item .list-blog-header button a, .list-item .list-blog-header .callout .pricing-container .pricing-item .foot .contact button a, .callout .pricing-container .pricing-item .foot .contact .list-item .list-blog-header button a, .list-item .list-blog-header .contact .callout .pricing-container .pricing-item .foot button a, .contact .callout .pricing-container .pricing-item .foot .list-item .list-blog-header button a {
-        color: #656161; }
-        .list-item .list-blog-header h4 a:hover, .list-item .list-blog-header .archive-list label a:hover, .archive-list .list-item .list-blog-header label a:hover, .list-item .list-blog-header .modular .bottom table th a:hover, .modular .bottom table .list-item .list-blog-header th a:hover, .list-item .list-blog-header .contact label a:hover, .contact .list-item .list-blog-header label a:hover, .list-item .list-blog-header .callout .pricing-container .pricing-item .name a:hover, .callout .pricing-container .pricing-item .list-item .list-blog-header .name a:hover, .list-item .list-blog-header .callout .pricing-container .pricing-item .foot .button a:hover, .callout .pricing-container .pricing-item .foot .list-item .list-blog-header .button a:hover, .list-item .list-blog-header .callout .pricing-container .pricing-item .foot .archive-list button a:hover, .callout .pricing-container .pricing-item .foot .archive-list .list-item .list-blog-header button a:hover, .list-item .list-blog-header .archive-list .callout .pricing-container .pricing-item .foot button a:hover, .archive-list .callout .pricing-container .pricing-item .foot .list-item .list-blog-header button a:hover, .list-item .list-blog-header .callout .pricing-container .pricing-item .foot .contact button a:hover, .callout .pricing-container .pricing-item .foot .contact .list-item .list-blog-header button a:hover, .list-item .list-blog-header .contact .callout .pricing-container .pricing-item .foot button a:hover, .contact .callout .pricing-container .pricing-item .foot .list-item .list-blog-header button a:hover {
+    .list-item .list-blog-header h4, .list-item .list-blog-header .modular .bottom table th, .modular .bottom table .list-item .list-blog-header th, .list-item .list-blog-header .contact label, .contact .list-item .list-blog-header label, .list-item .list-blog-header .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .list-item .list-blog-header .name, .list-item .list-blog-header .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .list-item .list-blog-header .button, .list-item .list-blog-header .callout .pricing-container .pricing-item .foot .contact button, .callout .pricing-container .pricing-item .foot .contact .list-item .list-blog-header button, .list-item .list-blog-header .contact .callout .pricing-container .pricing-item .foot button, .contact .callout .pricing-container .pricing-item .foot .list-item .list-blog-header button {
+      margin-bottom: 0.5rem; }
+      .list-item .list-blog-header h4 a, .list-item .list-blog-header .modular .bottom table th a, .modular .bottom table .list-item .list-blog-header th a, .list-item .list-blog-header .contact label a, .contact .list-item .list-blog-header label a, .list-item .list-blog-header .callout .pricing-container .pricing-item .name a, .callout .pricing-container .pricing-item .list-item .list-blog-header .name a, .list-item .list-blog-header .callout .pricing-container .pricing-item .foot .button a, .callout .pricing-container .pricing-item .foot .list-item .list-blog-header .button a, .list-item .list-blog-header .callout .pricing-container .pricing-item .foot .contact button a, .callout .pricing-container .pricing-item .foot .contact .list-item .list-blog-header button a, .list-item .list-blog-header .contact .callout .pricing-container .pricing-item .foot button a, .contact .callout .pricing-container .pricing-item .foot .list-item .list-blog-header button a {
+        color: #444; }
+        .list-item .list-blog-header h4 a:hover, .list-item .list-blog-header .modular .bottom table th a:hover, .modular .bottom table .list-item .list-blog-header th a:hover, .list-item .list-blog-header .contact label a:hover, .contact .list-item .list-blog-header label a:hover, .list-item .list-blog-header .callout .pricing-container .pricing-item .name a:hover, .callout .pricing-container .pricing-item .list-item .list-blog-header .name a:hover, .list-item .list-blog-header .callout .pricing-container .pricing-item .foot .button a:hover, .callout .pricing-container .pricing-item .foot .list-item .list-blog-header .button a:hover, .list-item .list-blog-header .callout .pricing-container .pricing-item .foot .contact button a:hover, .callout .pricing-container .pricing-item .foot .contact .list-item .list-blog-header button a:hover, .list-item .list-blog-header .contact .callout .pricing-container .pricing-item .foot button a:hover, .contact .callout .pricing-container .pricing-item .foot .list-item .list-blog-header button a:hover {
           color: #1BB3E9; }
     .list-item .list-blog-header img {
       display: block;
       margin-top: 1rem;
       border-radius: 3px; }
-  .list-item .list-blog-date, .list-item .list-blog-author {
-    text-align: center;
-    background-color: rgba(101, 97, 97, 0.1);
-    padding: 0.5rem 1rem;
-    margin-bottom: 0.2rem;
-    margin-right: 0.5rem;
-    font-size: 1rem;
-    text-transform: uppercase;
-    color: #444;
-    font-family: "Montserrat", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; }
-    @media only all and (min-width: 48em) and (max-width: 59.938em) {
-      .list-item .list-blog-date, .list-item .list-blog-author {
-        display: block;
-        width: 100%;
-        clear: both; } }
-    @media only all and (max-width: 47.938em) {
-      .list-item .list-blog-date, .list-item .list-blog-author {
-        display: block;
-        width: 100%;
-        clear: both; } }
+  .list-item .list-blog-date {
+    float: right;
+    text-align: center; }
+    .list-item .list-blog-date span {
+      display: block;
+      font-size: 1.75rem;
+      font-weight: 600;
+      line-height: 110%; }
+    .list-item .list-blog-date em {
+      display: block;
+      border-top: 1px solid #EEEEEE;
+      font-style: normal;
+      text-transform: uppercase; }
 
 .blog-content-item .list-blog-padding > p:nth-child(2) {
   font-size: 1.2rem; }
@@ -936,7 +922,7 @@ td {
             }
         }
         &:last-child {
-            a:after {display: none;} 
+            a:after {display: none;}
         }
     }
     @include breakpoint(tablet-range) {
@@ -952,17 +938,13 @@ td {
 }
 */
 .archives, .related-pages {
-  margin: 0;
   padding: 0;
   list-style: none; }
   .archives li, .related-pages li {
+    border-bottom: 1px solid #EEEEEE;
     line-height: 2rem; }
     .archives li:last-child, .related-pages li:last-child {
       border-bottom: 0; }
-  .archives a, .related-pages a {
-    color: #444; }
-    .archives a:hover, .related-pages a:hover {
-      color: #1BB3E9; }
 
 .related-pages li a {
   display: block; }
@@ -988,9 +970,8 @@ div#breadcrumbs {
       padding-left: 0; } }
   #sidebar .sidebar-content {
     margin-bottom: 3rem; }
-    #sidebar .sidebar-content h4, #sidebar .sidebar-content .archive-list label, .archive-list #sidebar .sidebar-content label, #sidebar .sidebar-content .modular .bottom table th, .modular .bottom table #sidebar .sidebar-content th, #sidebar .sidebar-content .contact label, .contact #sidebar .sidebar-content label, #sidebar .sidebar-content .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item #sidebar .sidebar-content .name, #sidebar .sidebar-content .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot #sidebar .sidebar-content .button, #sidebar .sidebar-content .callout .pricing-container .pricing-item .foot .archive-list button, .callout .pricing-container .pricing-item .foot .archive-list #sidebar .sidebar-content button, #sidebar .sidebar-content .archive-list .callout .pricing-container .pricing-item .foot button, .archive-list .callout .pricing-container .pricing-item .foot #sidebar .sidebar-content button, #sidebar .sidebar-content .callout .pricing-container .pricing-item .foot .contact button, .callout .pricing-container .pricing-item .foot .contact #sidebar .sidebar-content button, #sidebar .sidebar-content .contact .callout .pricing-container .pricing-item .foot button, .contact .callout .pricing-container .pricing-item .foot #sidebar .sidebar-content button {
-      margin-bottom: 1rem;
-      text-align: left; }
+    #sidebar .sidebar-content h4, #sidebar .sidebar-content .modular .bottom table th, .modular .bottom table #sidebar .sidebar-content th, #sidebar .sidebar-content .contact label, .contact #sidebar .sidebar-content label, #sidebar .sidebar-content .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item #sidebar .sidebar-content .name, #sidebar .sidebar-content .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot #sidebar .sidebar-content .button, #sidebar .sidebar-content .callout .pricing-container .pricing-item .foot .contact button, .callout .pricing-container .pricing-item .foot .contact #sidebar .sidebar-content button, #sidebar .sidebar-content .contact .callout .pricing-container .pricing-item .foot button, .contact .callout .pricing-container .pricing-item .foot #sidebar .sidebar-content button {
+      margin-bottom: 1rem; }
     #sidebar .sidebar-content p, #sidebar .sidebar-content ul {
       margin-top: 1rem; }
 
@@ -1002,36 +983,48 @@ ul.pagination {
   margin-top: 5rem;
   text-align: center; }
 
-.archive-list h4, .archive-list label, .archive-list .modular .bottom table th, .modular .bottom table .archive-list th, .archive-list .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .archive-list .name, .archive-list .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .archive-list .button, .callout .pricing-container .pricing-item .foot .archive-list button, .archive-list .callout .pricing-container .pricing-item .foot button {
-  text-align: left; }
-.archive-list input {
-  width: 50%;
-  line-height: 2rem; }
-  @media only all and (max-width: 47.938em) {
-    .archive-list input {
-      min-width: 80%; } }
-  @media only all and (min-width: 48em) and (max-width: 59.938em) {
-    .archive-list input {
-      min-width: 70%; } }
-.archive-list textarea {
-  min-width: 80%;
-  min-height: 25rem; }
-  @media only all and (max-width: 47.938em) {
-    .archive-list textarea {
-      min-width: 100%; } }
-  @media only all and (min-width: 48em) and (max-width: 59.938em) {
-    .archive-list textarea {
-      min-width: 90%; } }
-.archive-list input, .archive-list textarea {
-  border: 0 none;
-  background: rgba(68, 68, 68, 0.2);
-  box-shadow: none; }
-.archive-list label {
-  font-size: 1rem; }
-.archive-list button {
-  font-family: "Montserrat", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
-  text-transform: uppercase; }
-
+/*
+.archive-list {
+    h4 {
+        text-align: left;
+    }
+    input {
+        width: 50%;
+        line-height: 2rem;
+        @include breakpoint(mobile-only) {
+            min-width: 80%;
+        }
+        @include breakpoint(tablet-range) {
+            min-width: 70%;
+        }
+    }
+    textarea {
+        min-width: 80%;
+        min-height: 25rem;
+        @include breakpoint(mobile-only) {
+            min-width: 100%;
+        }
+        @include breakpoint(tablet-range) {
+            min-width: 90%;
+        }
+    }
+    input, textarea {
+        border: 0 none;
+        background: transparentize($core-text, 0.8);
+        box-shadow: none;
+    }
+    label {
+        @extend h4;
+        font-size: 1rem;
+    }
+    button {
+        @extend .button;
+        @extend .default-animation;
+        font-family: $font-family-header;
+        text-transform: uppercase;
+    }
+}
+*/
 #error {
   text-align: center;
   display: flex;
@@ -1139,7 +1132,7 @@ ul.pagination {
         padding-right: 0;
         margin-left: 4rem;
         margin-right: 4rem; } }
-  .modular .showcase .button, .modular .showcase .archive-list button, .archive-list .modular .showcase button, .modular .showcase .contact button, .contact .modular .showcase button {
+  .modular .showcase .button, .modular .showcase .contact button, .contact .modular .showcase button {
     color: #FFFFFF;
     font-family: "Montserrat", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
     padding: 0.3rem 1rem;
@@ -1148,7 +1141,7 @@ ul.pagination {
     border-radius: 3px;
     box-shadow: none;
     font-size: 1rem; }
-    .modular .showcase .button:hover, .modular .showcase .archive-list button:hover, .archive-list .modular .showcase button:hover, .modular .showcase .contact button:hover, .contact .modular .showcase button:hover {
+    .modular .showcase .button:hover, .modular .showcase .contact button:hover, .contact .modular .showcase button:hover {
       background: rgba(255, 255, 255, 0.2); }
 .modular .slideme_container .arrow {
   position: absolute;
@@ -1240,7 +1233,7 @@ ul.pagination {
     @media only all and (max-width: 47.938em) {
       .modular .features p {
         font-size: 1rem; } }
-  .modular .features .button, .modular .features .archive-list button, .archive-list .modular .features button, .modular .features .contact button, .contact .modular .features button {
+  .modular .features .button, .modular .features .contact button, .contact .modular .features button {
     background-color: #1BB3E9;
     color: #FFFFFF;
     font-family: "Montserrat", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
@@ -1269,7 +1262,7 @@ ul.pagination {
         width: 100%; } }
     .modular .features .feature i.fa {
       font-size: 2rem; }
-    .modular .features .feature h4, .modular .features .feature .archive-list label, .archive-list .modular .features .feature label, .modular .features .feature .bottom table th, .modular .bottom table .features .feature th, .modular .features .feature .contact label, .contact .modular .features .feature label, .modular .features .feature .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .modular .features .feature .name, .modular .features .feature .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .modular .features .feature .button, .modular .features .feature .callout .pricing-container .pricing-item .foot .archive-list button, .callout .pricing-container .pricing-item .foot .archive-list .modular .features .feature button, .modular .features .feature .archive-list .callout .pricing-container .pricing-item .foot button, .archive-list .callout .pricing-container .pricing-item .foot .modular .features .feature button, .modular .features .feature .callout .pricing-container .pricing-item .foot .contact button, .callout .pricing-container .pricing-item .foot .contact .modular .features .feature button, .modular .features .feature .contact .callout .pricing-container .pricing-item .foot button, .contact .callout .pricing-container .pricing-item .foot .modular .features .feature button {
+    .modular .features .feature h4, .modular .features .feature .bottom table th, .modular .bottom table .features .feature th, .modular .features .feature .contact label, .contact .modular .features .feature label, .modular .features .feature .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .modular .features .feature .name, .modular .features .feature .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .modular .features .feature .button, .modular .features .feature .callout .pricing-container .pricing-item .foot .contact button, .callout .pricing-container .pricing-item .foot .contact .modular .features .feature button, .modular .features .feature .contact .callout .pricing-container .pricing-item .foot button, .contact .callout .pricing-container .pricing-item .foot .modular .features .feature button {
       margin: 0;
       font-size: 1.1rem; }
     .modular .features .feature p {
@@ -1291,7 +1284,7 @@ ul.pagination {
       padding-right: 2rem; }
       .modular .features.big .feature-content.icon-offset {
         margin-left: 1rem; }
-      .modular .features.big .feature-content h4, .modular .features.big .feature-content .archive-list label, .archive-list .modular .features.big .feature-content label, .modular .features.big .feature-content .bottom table th, .modular .bottom table .features.big .feature-content th, .modular .features.big .feature-content .contact label, .contact .modular .features.big .feature-content label, .modular .features.big .feature-content .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .modular .features.big .feature-content .name, .modular .features.big .feature-content .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .modular .features.big .feature-content .button, .modular .features.big .feature-content .callout .pricing-container .pricing-item .foot .archive-list button, .callout .pricing-container .pricing-item .foot .archive-list .modular .features.big .feature-content button, .modular .features.big .feature-content .archive-list .callout .pricing-container .pricing-item .foot button, .archive-list .callout .pricing-container .pricing-item .foot .modular .features.big .feature-content button, .modular .features.big .feature-content .callout .pricing-container .pricing-item .foot .contact button, .callout .pricing-container .pricing-item .foot .contact .modular .features.big .feature-content button, .modular .features.big .feature-content .contact .callout .pricing-container .pricing-item .foot button, .contact .callout .pricing-container .pricing-item .foot .modular .features.big .feature-content button {
+      .modular .features.big .feature-content h4, .modular .features.big .feature-content .bottom table th, .modular .bottom table .features.big .feature-content th, .modular .features.big .feature-content .contact label, .contact .modular .features.big .feature-content label, .modular .features.big .feature-content .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .modular .features.big .feature-content .name, .modular .features.big .feature-content .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .modular .features.big .feature-content .button, .modular .features.big .feature-content .callout .pricing-container .pricing-item .foot .contact button, .callout .pricing-container .pricing-item .foot .contact .modular .features.big .feature-content button, .modular .features.big .feature-content .contact .callout .pricing-container .pricing-item .foot button, .contact .callout .pricing-container .pricing-item .foot .modular .features.big .feature-content button {
         font-size: 1.2rem; }
       .modular .features.big .feature-content p {
         padding: 0; }
@@ -1313,7 +1306,7 @@ ul.pagination {
     @media only all and (max-width: 47.938em) {
       .modular .bottom p {
         font-size: 1rem; } }
-  .modular .bottom .button, .modular .bottom .archive-list button, .archive-list .modular .bottom button, .modular .bottom .contact button, .contact .modular .bottom button {
+  .modular .bottom .button, .modular .bottom .contact button, .contact .modular .bottom button {
     background-color: #1BB3E9;
     color: #FFFFFF;
     font-family: "Montserrat", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
@@ -1321,7 +1314,7 @@ ul.pagination {
     box-shadow: none;
     font-size: 1rem;
     border: 0 none; }
-    .modular .bottom .button:hover, .modular .bottom .archive-list button:hover, .archive-list .modular .bottom button:hover, .modular .bottom .contact button:hover, .contact .modular .bottom button:hover {
+    .modular .bottom .button:hover, .modular .bottom .contact button:hover, .contact .modular .bottom button:hover {
       background-color: #0e6e90; }
   .modular .bottom.borderbottom {
     padding-bottom: 0; }
@@ -1362,7 +1355,7 @@ ul.pagination {
         margin-left: 7rem;
         margin-top: 0.5rem;
         margin-right: 1rem; }
-      .modular .bottom .services .service h4, .modular .bottom .services .service .archive-list label, .archive-list .modular .bottom .services .service label, .modular .bottom .services .service table th, .modular .bottom table .services .service th, .modular .bottom .services .service .contact label, .contact .modular .bottom .services .service label, .modular .bottom .services .service .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .modular .bottom .services .service .name, .modular .bottom .services .service .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .modular .bottom .services .service .button, .modular .bottom .services .service .callout .pricing-container .pricing-item .foot .archive-list button, .callout .pricing-container .pricing-item .foot .archive-list .modular .bottom .services .service button, .modular .bottom .services .service .archive-list .callout .pricing-container .pricing-item .foot button, .archive-list .callout .pricing-container .pricing-item .foot .modular .bottom .services .service button, .modular .bottom .services .service .callout .pricing-container .pricing-item .foot .contact button, .callout .pricing-container .pricing-item .foot .contact .modular .bottom .services .service button, .modular .bottom .services .service .contact .callout .pricing-container .pricing-item .foot button, .contact .callout .pricing-container .pricing-item .foot .modular .bottom .services .service button {
+      .modular .bottom .services .service h4, .modular .bottom .services .service table th, .modular .bottom table .services .service th, .modular .bottom .services .service .contact label, .contact .modular .bottom .services .service label, .modular .bottom .services .service .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .modular .bottom .services .service .name, .modular .bottom .services .service .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .modular .bottom .services .service .button, .modular .bottom .services .service .callout .pricing-container .pricing-item .foot .contact button, .callout .pricing-container .pricing-item .foot .contact .modular .bottom .services .service button, .modular .bottom .services .service .contact .callout .pricing-container .pricing-item .foot button, .contact .callout .pricing-container .pricing-item .foot .modular .bottom .services .service button {
         text-align: left;
         margin-bottom: 0; }
 
@@ -1484,7 +1477,7 @@ ul.pagination {
         color: #fff;
         text-align: center;
         padding: 1rem 0; }
-        .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .archive-list button, .archive-list .callout .pricing-container .pricing-item .foot button, .callout .pricing-container .pricing-item .foot .contact button, .contact .callout .pricing-container .pricing-item .foot button {
+        .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .contact button, .contact .callout .pricing-container .pricing-item .foot button {
           margin: 0;
           padding: 0;
           width: 9rem;
@@ -1493,7 +1486,7 @@ ul.pagination {
           color: #fff;
           display: inline-block;
           background: rgba(255, 255, 255, 0.25); }
-          .callout .pricing-container .pricing-item .foot .button:hover, .callout .pricing-container .pricing-item .foot .archive-list button:hover, .archive-list .callout .pricing-container .pricing-item .foot button:hover, .callout .pricing-container .pricing-item .foot .contact button:hover, .contact .callout .pricing-container .pricing-item .foot button:hover {
+          .callout .pricing-container .pricing-item .foot .button:hover, .callout .pricing-container .pricing-item .foot .contact button:hover, .contact .callout .pricing-container .pricing-item .foot button:hover {
             background: rgba(255, 255, 255, 0.15); }
       .callout .pricing-container .pricing-item sup {
         font-size: 2rem; }
@@ -1534,11 +1527,11 @@ ul.pagination {
           display: block;
           width: 44%;
           margin-bottom: 2rem; } }
-      .team .members .member h4, .team .members .member .archive-list label, .archive-list .team .members .member label, .team .members .member .modular .bottom table th, .modular .bottom table .team .members .member th, .team .members .member .contact label, .contact .team .members .member label, .team .members .member .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .team .members .member .name, .team .members .member .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .team .members .member .button, .team .members .member .callout .pricing-container .pricing-item .foot .archive-list button, .callout .pricing-container .pricing-item .foot .archive-list .team .members .member button, .team .members .member .archive-list .callout .pricing-container .pricing-item .foot button, .archive-list .callout .pricing-container .pricing-item .foot .team .members .member button, .team .members .member .callout .pricing-container .pricing-item .foot .contact button, .callout .pricing-container .pricing-item .foot .contact .team .members .member button, .team .members .member .contact .callout .pricing-container .pricing-item .foot button, .contact .callout .pricing-container .pricing-item .foot .team .members .member button {
+      .team .members .member h4, .team .members .member .modular .bottom table th, .modular .bottom table .team .members .member th, .team .members .member .contact label, .contact .team .members .member label, .team .members .member .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .team .members .member .name, .team .members .member .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .team .members .member .button, .team .members .member .callout .pricing-container .pricing-item .foot .contact button, .callout .pricing-container .pricing-item .foot .contact .team .members .member button, .team .members .member .contact .callout .pricing-container .pricing-item .foot button, .contact .callout .pricing-container .pricing-item .foot .team .members .member button {
         text-align: left;
         margin-bottom: 0; }
         @media only all and (max-width: 47.938em) {
-          .team .members .member h4, .team .members .member .archive-list label, .archive-list .team .members .member label, .team .members .member .modular .bottom table th, .modular .bottom table .team .members .member th, .team .members .member .contact label, .contact .team .members .member label, .team .members .member .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .team .members .member .name, .team .members .member .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .team .members .member .button, .team .members .member .callout .pricing-container .pricing-item .foot .archive-list button, .callout .pricing-container .pricing-item .foot .archive-list .team .members .member button, .team .members .member .archive-list .callout .pricing-container .pricing-item .foot button, .archive-list .callout .pricing-container .pricing-item .foot .team .members .member button, .team .members .member .callout .pricing-container .pricing-item .foot .contact button, .callout .pricing-container .pricing-item .foot .contact .team .members .member button, .team .members .member .contact .callout .pricing-container .pricing-item .foot button, .contact .callout .pricing-container .pricing-item .foot .team .members .member button {
+          .team .members .member h4, .team .members .member .modular .bottom table th, .modular .bottom table .team .members .member th, .team .members .member .contact label, .contact .team .members .member label, .team .members .member .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .team .members .member .name, .team .members .member .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .team .members .member .button, .team .members .member .callout .pricing-container .pricing-item .foot .contact button, .callout .pricing-container .pricing-item .foot .contact .team .members .member button, .team .members .member .contact .callout .pricing-container .pricing-item .foot button, .contact .callout .pricing-container .pricing-item .foot .team .members .member button {
             text-align: center; } }
       .team .members .member hr {
         margin: 1rem 0; }
@@ -1604,7 +1597,7 @@ ul.pagination {
           .portfolio .notebooks .notebook-row .notebook {
             width: 170%;
             margin-left: -4.7rem; } }
-        .portfolio .notebooks .notebook-row .notebook h4, .portfolio .notebooks .notebook-row .notebook .archive-list label, .archive-list .portfolio .notebooks .notebook-row .notebook label, .portfolio .notebooks .notebook-row .notebook .modular .bottom table th, .modular .bottom table .portfolio .notebooks .notebook-row .notebook th, .portfolio .notebooks .notebook-row .notebook .contact label, .contact .portfolio .notebooks .notebook-row .notebook label, .portfolio .notebooks .notebook-row .notebook .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .portfolio .notebooks .notebook-row .notebook .name, .portfolio .notebooks .notebook-row .notebook .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .portfolio .notebooks .notebook-row .notebook .button, .portfolio .notebooks .notebook-row .notebook .callout .pricing-container .pricing-item .foot .archive-list button, .callout .pricing-container .pricing-item .foot .archive-list .portfolio .notebooks .notebook-row .notebook button, .portfolio .notebooks .notebook-row .notebook .archive-list .callout .pricing-container .pricing-item .foot button, .archive-list .callout .pricing-container .pricing-item .foot .portfolio .notebooks .notebook-row .notebook button, .portfolio .notebooks .notebook-row .notebook .callout .pricing-container .pricing-item .foot .contact button, .callout .pricing-container .pricing-item .foot .contact .portfolio .notebooks .notebook-row .notebook button, .portfolio .notebooks .notebook-row .notebook .contact .callout .pricing-container .pricing-item .foot button, .contact .callout .pricing-container .pricing-item .foot .portfolio .notebooks .notebook-row .notebook button {
+        .portfolio .notebooks .notebook-row .notebook h4, .portfolio .notebooks .notebook-row .notebook .modular .bottom table th, .modular .bottom table .portfolio .notebooks .notebook-row .notebook th, .portfolio .notebooks .notebook-row .notebook .contact label, .contact .portfolio .notebooks .notebook-row .notebook label, .portfolio .notebooks .notebook-row .notebook .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .portfolio .notebooks .notebook-row .notebook .name, .portfolio .notebooks .notebook-row .notebook .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .portfolio .notebooks .notebook-row .notebook .button, .portfolio .notebooks .notebook-row .notebook .callout .pricing-container .pricing-item .foot .contact button, .callout .pricing-container .pricing-item .foot .contact .portfolio .notebooks .notebook-row .notebook button, .portfolio .notebooks .notebook-row .notebook .contact .callout .pricing-container .pricing-item .foot button, .contact .callout .pricing-container .pricing-item .foot .portfolio .notebooks .notebook-row .notebook button {
           text-align: left;
           margin-bottom: 0; }
         .portfolio .notebooks .notebook-row .notebook p {
@@ -1635,7 +1628,7 @@ ul.pagination {
     float: left; }
     .logo h3 a {
       color: #444; }
-  .logo h4, .logo .archive-list label, .archive-list .logo label, .logo .modular .bottom table th, .modular .bottom table .logo th, .logo .contact label, .contact .logo label, .logo .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .logo .name, .logo .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .logo .button, .logo .callout .pricing-container .pricing-item .foot .archive-list button, .callout .pricing-container .pricing-item .foot .archive-list .logo button, .logo .archive-list .callout .pricing-container .pricing-item .foot button, .archive-list .callout .pricing-container .pricing-item .foot .logo button, .logo .callout .pricing-container .pricing-item .foot .contact button, .callout .pricing-container .pricing-item .foot .contact .logo button, .logo .contact .callout .pricing-container .pricing-item .foot button, .contact .callout .pricing-container .pricing-item .foot .logo button {
+  .logo h4, .logo .modular .bottom table th, .modular .bottom table .logo th, .logo .contact label, .contact .logo label, .logo .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .logo .name, .logo .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .logo .button, .logo .callout .pricing-container .pricing-item .foot .contact button, .callout .pricing-container .pricing-item .foot .contact .logo button, .logo .contact .callout .pricing-container .pricing-item .foot button, .contact .callout .pricing-container .pricing-item .foot .logo button {
     text-align: left; }
   .logo ul {
     margin: 0;
