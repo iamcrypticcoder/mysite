@@ -66,8 +66,8 @@
                 {{ page.content }}
             </div>
 
-            {% if config.plugins.comments.enabled %}
-                {% include 'partials/comments.html.twig' %}
+            {% if config.plugins.jscomments.enabled %}
+                {{ jscomments()|raw }}
             {% endif %}
 
             {% set show_prev_next = true %}
