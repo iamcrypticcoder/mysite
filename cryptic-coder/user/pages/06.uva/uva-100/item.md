@@ -1,16 +1,22 @@
 ---
 title: 'UVA-100 (3n plus 1)'
+published: true
 date: '00:05 11/02/2016'
 taxonomy:
     category:
         - blog
     tag:
         - uva
+        - this-is-a-long-tag
+        - this-is-a-long-tag
 body_classes: 'header-lite fullwidth blogstyling'
-author: 'Cryptic Coder'
 ---
 
-```
+Here is full code:
+
+===
+
+```cpp
 // Accepted Runtime - 0.560     Brute Force
 
 #include <cstdio>

@@ -879,8 +879,8 @@ td {
     .list-item .list-blog-header img {
       display: block;
       margin-top: 1rem;
-      border-radius: 0; }
-  .list-item .list-blog-date, .list-item .list-blog-author, .list-item .list-blog-tag {
+      border-radius: 3px; }
+  .list-item .list-blog-date, .list-item .list-blog-author {
     text-align: center;
     background-color: rgba(101, 97, 97, 0.1);
     padding: 0.5rem 1rem;
@@ -891,12 +891,12 @@ td {
     color: #9A9898;
     font-family: "novecento_sans_widedemibold", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; }
     @media only all and (min-width: 48em) and (max-width: 59.938em) {
-      .list-item .list-blog-date, .list-item .list-blog-author, .list-item .list-blog-tag {
+      .list-item .list-blog-date, .list-item .list-blog-author {
         display: block;
         width: 100%;
         clear: both; } }
     @media only all and (max-width: 47.938em) {
-      .list-item .list-blog-date, .list-item .list-blog-author, .list-item .list-blog-tag {
+      .list-item .list-blog-date, .list-item .list-blog-author {
         display: block;
         width: 100%;
         clear: both; } }
@@ -904,37 +904,53 @@ td {
 .blog-content-item .list-blog-padding > p:nth-child(2) {
   font-size: 1.2rem; }
 
-.tags {
-  margin: 0;
-  padding: 0;
-  display: inline;
-  background-color: rgba(101, 97, 97, 0.1);
-  padding: 0.5rem 1rem;
+.tags a {
+  display: inline-block;
+  font-size: 0.8rem;
+  border: 1px solid #87b672;
+  border-radius: 3px;
+  padding: 0.1rem 0.4rem;
   margin-bottom: 0.2rem;
-  list-style: none;
-  text-align: center; }
-  .tags li {
-    display: inline-block;
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-family: "novecento_sans_widedemibold", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; }
-    .tags li a {
-      color: #9A9898; }
-      .tags li a:after {
-        content: ","; }
-    .tags li:last-child a:after {
-      display: none; }
-  @media only all and (min-width: 48em) and (max-width: 59.938em) {
-    .tags {
-      display: block;
-      width: 100%;
-      clear: both; } }
-  @media only all and (max-width: 47.938em) {
-    .tags {
-      display: block;
-      width: 100%;
-      clear: both; } }
+  text-transform: uppercase; }
 
+/*
+// Tags
+.tags {
+    margin: 0;
+    padding: 0;
+    display: inline;
+    background-color: transparentize($light-gray, 0.9);
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.2rem;
+    list-style: none;
+    text-align: center;
+    li {
+        display: inline-block;
+        font-size: $core-font-size;
+        text-transform: uppercase;
+        font-family: $font-family-header;
+        a {
+            color: $core-text;
+            &:after {
+                content: ",";
+            }
+        }
+        &:last-child {
+            a:after {display: none;} 
+        }
+    }
+    @include breakpoint(tablet-range) {
+        display: block;
+        width: 100%;
+        clear: both;
+    }
+    @include breakpoint(mobile-only) {
+        display: block;
+        width: 100%;
+        clear: both;
+    }
+}
+*/
 .archives, .related-pages {
   margin: 0;
   padding: 0;
@@ -1129,7 +1145,7 @@ ul.pagination {
     padding: 0.3rem 1rem;
     background: rgba(255, 255, 255, 0);
     border: 2px solid #FFFFFF;
-    border-radius: 0;
+    border-radius: 3px;
     box-shadow: none;
     font-size: 1rem; }
     .modular .showcase .button:hover, .modular .showcase .archive-list button:hover, .archive-list .modular .showcase button:hover, .modular .showcase .contact button:hover, .contact .modular .showcase button:hover {
@@ -1228,7 +1244,7 @@ ul.pagination {
     background-color: #87b672;
     color: #FFFFFF;
     font-family: "novecento_sans_widedemibold", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
-    border-radius: 0;
+    border-radius: 3px;
     box-shadow: none;
     font-size: 1rem; }
   .modular .features .feature-items {
@@ -1301,7 +1317,7 @@ ul.pagination {
     background-color: #87b672;
     color: #FFFFFF;
     font-family: "novecento_sans_widedemibold", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
-    border-radius: 0;
+    border-radius: 3px;
     box-shadow: none;
     font-size: 1rem;
     border: 0 none; }

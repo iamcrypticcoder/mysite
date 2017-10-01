@@ -41,6 +41,7 @@
     &:last-child {
         border-bottom: 0;
     }
+
     .list-blog-header {
         position: relative;
         h4 {
@@ -60,7 +61,7 @@
         }
     }
 
-    .list-blog-date, .list-blog-author, .list-blog-tag {
+    .list-blog-date, .list-blog-author {
         text-align: center;
         background-color: transparentize($light-gray, 0.9);
         padding: 0.5rem 1rem;
@@ -91,6 +92,20 @@
     }
 }
 
+// Tags
+.tags {
+    a {
+        display: inline-block;
+        font-size: $core-font-size - 0.2rem;
+        border: 1px solid $core-accent;
+        border-radius: $border-radius;
+        padding: 0.1rem 0.4rem;
+        margin-bottom: 0.2rem;
+        text-transform: uppercase;
+    }
+}
+
+/*
 // Tags
 .tags {
     margin: 0;
@@ -127,6 +142,7 @@
         clear: both;
     }
 }
+*/
 
 // Archives & Related-Pages
 .archives, .related-pages {

@@ -22,6 +22,7 @@
             <i class="fa fa-calendar"></i>
             {{ page.date|date("d") }}, {{ page.date|date("M") }}
         </span>
+
         {% if page.header.author %}
         <span class="list-blog-author">
             <i class="fa fa-user"></i>
@@ -30,12 +31,11 @@
         {% endif %}
 
         {% if page.taxonomy.tag %}
+            <span class="tags">
             {% for tag in page.taxonomy.tag %}
-                <span class="list-blog-tag">
-                    <i class="fa fa-tag"></i>
-                    <a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
-                </span>
+                <a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
             {% endfor %}
+            </span>
         {% endif %}
 
         <!--

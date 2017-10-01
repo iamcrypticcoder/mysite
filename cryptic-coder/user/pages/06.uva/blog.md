@@ -18,6 +18,10 @@ feed:
     description: 'Sample Blog Description'
     limit: 10
 pagination: true
+summary:
+    enabled: false
+    format: 'short | long'
+    size: int
 ---
 
 # UVA SOLUTIONS
