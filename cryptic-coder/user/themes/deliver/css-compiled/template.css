@@ -302,6 +302,8 @@ b, strong, label, th {
 
 .header-lite #body {
   padding-top: 12rem; }
+.header-lite #breadcrumbs {
+  margin-top: 1rem; }
 .header-lite #header {
   box-shadow: none;
   color: #656161; }

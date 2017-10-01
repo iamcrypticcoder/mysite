@@ -18,19 +18,19 @@
     </div>
 {% endif %}
 <div class="sidebar-content">
-    <h4>{{ 'SIDEBAR.SOME_TEXT_WIDGET.HEADLINE'|t }}</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+    <h4>Quote</h4>
+    <p>To me, mathematics, computer science, and the arts are insanely related. They're all creative expressions. <b> - Sebastian Thrun</b></p>
 </div>
 {% if config.plugins.taxonomylist.enabled %}
     <div class="sidebar-content">
         <h4>{{ 'SIDEBAR.POPULAR_TAGS.HEADLINE'|t }}</h4>
-        {% include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag'} %}
+        {% include 'partials/taxonomylist.html.twig' with {'taxonomy':'tag'} %}
     </div>
 {% endif %}
 {% if config.plugins.archives.enabled %}
     <div class="sidebar-content">
         <h4>{{ 'SIDEBAR.ARCHIVES.HEADLINE'|t }}</h4>
-        {% include 'partials/archives.html.twig' with {'base_url':new_base_url} %}
+        {% include 'partials/archives.html.twig' %}
     </div>
 {% endif %}
 {% if config.plugins.feed.enabled %}
