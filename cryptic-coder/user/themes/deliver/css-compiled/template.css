@@ -323,6 +323,7 @@ b, strong, label, th {
       color: #656161; }
 
 .footer {
+  color: #fff;
   font-size: 0.9rem;
   background: #333;
   width: 100%;
@@ -332,7 +333,7 @@ b, strong, label, th {
     display: table;
     clear: both; }
   .footer a {
-    color: #444; }
+    color: #fff; }
   .footer h4, .footer .modular .bottom table th, .modular .bottom table .footer th, .footer .contact label, .contact .footer label, .footer .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .footer .name, .footer .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .footer .button, .footer .callout .pricing-container .pricing-item .foot .contact button, .callout .pricing-container .pricing-item .foot .contact .footer button, .footer .contact .callout .pricing-container .pricing-item .foot button, .contact .callout .pricing-container .pricing-item .foot .footer button {
     line-height: 2rem;
     margin-top: 0;

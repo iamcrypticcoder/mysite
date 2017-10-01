@@ -1,4 +1,5 @@
 .footer {
+    color: $white;
     font-size:  $core-font-size - 0.1rem;
     background: #333;
     width: 100%;
@@ -6,7 +7,7 @@
     padding-top: 2rem;
     @include clearfix;
     a {
-      color: $core-text;
+      color: $white;
     }
     h4 {
       line-height: 2rem;
