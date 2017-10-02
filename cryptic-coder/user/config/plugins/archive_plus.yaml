@@ -10,7 +10,7 @@ limit:
   month: 12
   items: 40
 order:
-  by: date
+  by: default
   dir: desc
 filter_combinator: and
 filters:
