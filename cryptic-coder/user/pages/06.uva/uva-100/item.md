@@ -7,14 +7,12 @@ taxonomy:
         - blog
     tag:
         - uva
-        - this-is-a-long-tag
-        - this-is-a-long-tag
 body_classes: 'header-lite fullwidth blogstyling'
 ---
 
-Here is full code:
+Two solutions available here. First one is brute force solution and second one is DP. You will notice runtime differences between these 2 solutions.
 
-===
+Brute force solution:
 
 ```cpp
 // Accepted Runtime - 0.560     Brute Force
@@ -58,7 +56,12 @@ int main()
 
 	return 0;
 }
-// -----------------------------------------------------------------------------
+```
+===
+
+Brute force solution with function:
+
+```cpp
 // Accepted 0.616    Brute Force with function
 
 #include <cstdio>
@@ -109,8 +112,10 @@ int main()
 
 	return 0;
 }
-//------------------------------------------------------------------------------
+```
+DP solution:
 
+```cpp
 // Accepted Runtime only 0.048        DP Solution
 
 #include <cstdio>

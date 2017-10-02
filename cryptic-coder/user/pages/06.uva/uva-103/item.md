@@ -1,6 +1,6 @@
 ---
 title: 'UVA-103 (Stacking Boxes)'
-published: false
+published: true
 date: '00:05 11/02/2016'
 taxonomy:
     category:
@@ -9,6 +9,10 @@ taxonomy:
         - uva
 body_classes: 'header-lite fullwidth blogstyling'
 ---
+
+Here is full code:
+
+===
 
 ```
 #include <set>

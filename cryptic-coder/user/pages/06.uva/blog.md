@@ -1,7 +1,7 @@
 ---
-title: 'UVA Solutions'
+title: 'UVA SOLUTIONS'
 blog_url: uva-solution
-menu: 'UVA Solutions'
+menu: 'UVA SOLUTIONS'
 body_classes: 'header-lite fullwidth blogstyling'
 bg_color: '#B4B093'
 sitemap:
