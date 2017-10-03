@@ -26,9 +26,393 @@ body_classes: 'header-lite fullwidth blogstyling'
 
 কি মনে হচ্ছে B ও G এর দূরত্বই কি সবচেয়ে কম ?
 
+
 ১। প্রথমেই পয়েন্টগুলো কে এদের এক্স-স্থানাঙ্কের সাপেক্ষে সর্ট করতে হবে ।
 
 ![](x%20sorted.png)
 
 ধরে নাও পয়েন্টগুলো এক্স-স্থানাঙ্কের সাপেক্ষে সর্ট করার পর এরকম হল
 
+
+২। ডিভাইড স্টেপ... এবার সর্টেড পয়েন্টগুলোকে সমান দুইভাগ করতে হবে । যেহেতু পয়েন্টগুলো এক্স-স্থানাঙ্কের সাপেক্ষে সর্টেড স্বাভাবিকভাবেই প্রথমভাগে থাকবে বামদিকের পয়েন্টগুলো এবং দ্বিতীয়ভাগে থাকবে ডান দিকের পয়েন্টগুলো । অন্যভাবে বলা যায় একটি উলম্ব লাইন কল্পনা করতে হবে যেন সেটা পয়েন্টগুলোকে সমান দুভাগে ভাগ করে । এক ভাগের পয়েন্টগুলো লাইনের বামদিকে অথবা লাইনের উপরে থাকবে, অন্য ভাগের পয়েন্টগুলো লাইনের ডান দিকে অথবা লাইনের উপরে থাকবে । যদি P হয় পয়েন্টগুলোর সেট তাহলে PL এবং PR এই দুই সেটে পয়েন্তগুলোকে ভাগ করতে হবে । PL এ থাকবে floor(|P| / 2) সংখ্যক পয়েন্ট এবং PR এ থাকবে ceiling(|P| / 2) সংখ্যক পয়েন্ট । উপরের পয়েন্টগুলোকে ভাগ করতে হবে এভাবে -
+
+![](1st%20divide.png)
+
+
+৩। ডিভাইড অ্যান্ড কঙ্কয়ার এর মূলকথা কি ? ডিভাইড করো এবং প্রতিটি ভাগ আলেদা ভাবে শলভ করো, শেষে দুইটা ভাগের শলভ একসাথে করে সবটা ভাগ শলভ করো । এখানেও বাম ও ডান ভাগের পয়েন্টগুলোকে রিকার্সিভ ভাবে শলভ করতে হবে । নিশ্চয়ই জানো ডিভাইড অ্যান্ড কঙ্কয়ার টেকনিকের এই অংশটিকে বলে কঙ্কয়ার । ধরে নেই ডিভাইড লাইনের দুই পাশের পয়েন্টগুলো শলভ করে সর্বনিম্ন দূরত্ব পেলাম d ।
+
+৪। নিশ্চয়ই মাথায় প্রশ্ন জেগে গেছে, যদি নিকটবর্তী দূরত্বের যে জোড় হবে তার একটি যদি ডিভাইড লাইনের বাম দিকে এবং অন্যটি যদি ডান দিকে থাকে তাহলে ? হ্যাঁ এরকম তো হতেই পারে । আর এজন্যই এই এলগরিদমের কম্বাইন অংশটি একটু কঠিন (ভালই কঠিন মনে হয়েছিল যখন প্রথমবারের মত শিখি :P) । এই অংশটুকুর উপর এলগরিদমের রান টাইম নির্ভর করে । এই অংশে আমাদের দেখতে হবে বর্তমান সর্বনিম্ন দূরত্ব d এর থেকে কম দূরত্বের কোনও পয়েন্ট জোড়া আছে কিনা যার একটি ডিভাইড লাইনের বাম দিকে অন্যটি ডান দিকে ? আপাতত ধরে নেই এই অংশটুকু আমরা করে ফেলিছি এবং d এর থেকে ছোট দূরত্ব পেলাম dprime । তাহলে dprime ই হবে আমাদের সর্বনিম্ন দূরত্ব । যদি dprime না পেতাম তাহলে d হত সর্বনিম্ন দূরত্ব ।
+
+এবার এলগরিদমের সবচেয়ে মজার চার নম্বর অংশটুকু (কম্বাইন স্টেপ) ভাল করে ব্যাখ্যা করার চেষ্টা করি । নিচের পয়েন্টগুলো থেকে আমাদের নিকটবর্তী পয়েন্টজোড় বের করতে হবে ।
+
+![](given%20points.png)
+
+কোড করে টেস্ট করার জন্য পয়েন্টগুলোর স্থানাংক দিয়ে দিচ্ছি ।
+
+    1. A = (3, 1)
+    2. B = (2, 5)
+    3. C = (0, 2)
+    4. D = (0, 9)
+    5. E = (5, 7)
+    6. F = (7, 4)
+    7. G = (4, 4)
+    8. H = (7, 1)
+
+এক্স-স্থানাঙ্কের সাপেক্ষে সর্ট করার পর হবে নিচের মত –
+
+![](x%20sorted.png)
+
+প্রথমবার পয়েন্টগুলোকে দুভাগ করতে হবে এভাবে –
+
+![](1st%20divide.png)
+
+তাহলে বামদিকের ভাগে পড়লো {A, B, C, D} এবং ডানদিকের ভাগে পড়লো {E, F, G, H}
+
+বামদিকের ভাগের পয়েন্টগুলো সর্বনিম্ন দূরত্ব ৩.১৬২৩ এবং ডানদিকের ভাগের পয়েন্টগুলো সর্বনিম্ন দূরত্ব ৩ । তাহলে বর্তমান সর্বনিম্ন দূরত্ব minDist = ৩ । কিন্তু সর্বনিম্ন দূরত্ব দেখাই যাচ্ছে C এবং E এর মদ্ধে । C হল ডিভাইড লাইনের বামে এবং E হল ডিভাইড লাইনের ডানে । আমাদের চ্যালেঞ্জ হল এমন দুটি পয়েন্ট আছে কিনা চেক করা যার একটি বামে ও অন্যটি ডানে অবস্থিত এবং যাদের দূরত্ব বর্তমান minDist থেকে কম ।
+
+লক্ষ্য করো, যদি এমন দুটি পয়েন্ট থাকে তাহলে নিশ্চয়ই সেগুলো ডিভাইড লাইন থেকে এক্স-অক্ষ বরাবর minDist দূরত্বের মধ্যে থাকবে । তাহলে যেটা করতে হবে তা হল ডিভাইড লাইনের দুপাশে বর্তমান minDist দূরত্বের মধ্যে থাকা পয়েন্টগুলোকে বিবেচনা করতে হবে । তারপর সেই পয়েন্টগুলোর মধ্যে সর্বনিম্ন দূরত্ব বের করতে হবে । কিভাবে করবো ? প্রতিটির সাথে প্রতিটির দূরত্ব বের করে দেখবো ? না । পয়েন্টগুলো কে ওয়াই-স্থানাঙ্কের সাপেক্ষে সর্ট করবো । এক্স-অক্ষ বরাবর ডিভাইড লাইনের minDist দূরত্বের মধ্যে থাকা পয়েন্টগুলোকে ওয়াই-স্থানাঙ্কের সাপেক্ষে সর্ট করলে হবে নিচের মত ।
+
+![](combine%20step.png)
+
+
+ওয়াই-স্থানাঙ্কের সাপেক্ষে সর্ট করার ফলে আমাদের প্রতিটির সাথে প্রতিটির চেক করার প্রয়োজন নেই । লক্ষ্য করো এখন প্রতিটি পয়েন্টের জন্য লম্বভাবে বর্তমান minDist এর চেয়ে কম দূরত্বের মধ্যে থাকা পয়েন্টগুলোর সাথে তুলনা করে দেখতে হবে দূরত্ব কমানো যায় কিনা ? কারণ কি ? কারণ হল লম্বদূরত্ব যদি বর্তমান minDist এর সমান বা বড় হয় তাহলে ইউক্লিডিয়ান দূরত্ব বর্তমান minDist থেকে ছোট হওয়ার প্রশ্নই আসে না । ঠিক তো ? তাহলে চলো একটু টেস্ট করে দেখি ।
+
+বর্তমান minDist = ৩
+
+১ নম্বর পয়েন্টের জন্য –
+
+২ নম্বর পয়েন্টের সাথে লম্বদূরত্ব ৩ যা minDist এর সমান
+
+তাই পরের পয়েন্টগুলোর সাথে তুলনা করার প্রয়োজন নেই, কারণ পরের পয়েন্টগুলো অবশ্যই উপরে
+
+হবে ।
+
+২ নম্বর পয়েন্টের জন্য –
+
+৩ নম্বর পয়েন্টের সাথে লম্বদূরত্ব ১ যা minDist থেকে ছোট, তাই ২ ও ৩ এর দূরত্ব = ২.২৩৬১ < ৩ । 
+
+তাই বর্তমান minDist = ২.২৩৬১
+
+৪ নম্বর পয়েন্টের সাথে লম্বদূরত্ব ৩ যা ২.২৩৬১ থেকে বড় । তাই পরের পয়েন্টগুলোর সাথে তুলনা করার প্রয়োজন নেই
+
+৩ নম্বর পয়েন্টের জন্য –
+        ৪ নম্বর পয়েন্টের সাথে লম্বদূরত্ব ২ যা minDist থেকে ছোট, তাই ৩ ও ৪ এর দূরত্ব = ৩.৬০৫ > ২.২৩৬১
+
+তাই বর্তমান minDist অপরিবর্তিত থাকবে = ২.২৩৬১
+
+
+
+এবার কোড করি চলো –
+
+```cpp
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <stdio.h>
+#include <math.h>
+#include <float.h>
+
+using namespace std;
+
+#define EPS 1e-9
+#define SQR(x) ((x)*(x))
+#define INF 99999999
+
+typedef struct {
+        double x, y;
+} Point;
+
+int N;                      // Number of Points given
+Point pnts[10001];
+Point minA, minB;           // two points of closest pair
+double minDist;             // Distance of closest pair
+
+bool compX(Point a, Point b)
+{
+    return (a.x < b.x);
+}
+
+bool compY(Point a, Point b)
+{
+    return (a.y < b.y);
+}
+
+void checkPair(Point a, Point b)
+{
+    double d = SQR(b.x-a.x)+SQR(b.y-a.y);
+    if(d < minDist) {
+        minDist = d;
+        minA = a; minB = b;
+    }
+}
+
+// A recursive function to find the smallest distance. The array P contains
+// all points sorted according to x coordinate
+void divideAndConquer(Point p[], int n)
+{
+        int i, j, cnt;
+        vector<Point> strip;
+        if(n == 2) checkPair(p[1], p[2]);         /* base cases */
+        if(n <= 2) return;
+        int mid = n / 2;
+    
+        divideAndConquer(p, mid);
+        divideAndConquer(p + mid, n - mid);
+    
+        /// Build an vector strip that contains points close (closer than min)
+        /// to the line passing through the middle point
+        for(i = 1; i <= n; i++)
+               if(SQR(p[i].x - p[mid].x) < minDist) strip.push_back(p[i]);
+    
+        sort(strip.begin(), strip.end(), compY);                    // Sorting by y-coordinate
+    
+        // Find the closest points in strip.
+        for(i = 0; i < strip.size(); i++) {
+               if(SQR(strip[i].x - p[mid].x) >= minDist) break;
+               for(j = i+1; j < strip.size(); j++) {
+                       if(SQR(strip[i].y - strip[j].y) >= minDist) break;
+                       checkPair(strip[i], strip[j]);
+                   }
+            }
+}
+
+// Make sure points are stored in array from index 1
+double closestPair(Point p[], int n)
+{
+        minDist = DBL_MAX;
+        sort(p + 1, p + 1 + n, compX);
+        divideAndConquer(p, n);
+}
+
+void showPnts()
+{
+        for(int i = 1; i <= N; i++) {
+               printf("%lf %lf\n", pnts[i].x, pnts[i].y);
+            }
+}
+
+int main()
+{
+        //freopen("input.txt", "r", stdin);
+        //freopen("output.txt", "w", stdout);
+        int i, j;
+        while(scanf("%d", &N) == 1) {
+               for(i = 1; i <= N; i++)
+                       scanf("%lf %lf", &pnts[i].x, &pnts[i].y);
+               closestPair(pnts, N);
+               printf("Closest Points are (%.4lf, %.4lf) and (%.4lf, %.4lf)\n", minA.x, minA.y, minB.x, minB.y);
+               printf("Closest Distance is: %.4lf\n", sqrt(minDist));
+            }
+        return 0;
+}
+/**
+ INPUT
+ 13
+ 1 1
+ 1 5
+ 2 3
+ 3 1
+ 3 4
+ 3 7
+ 4 9
+ 5 7
+ 6 5
+ 9 3
+ 9 8
+ 10 1
+ 12 3
+ OUTPUT
+ Closest Points are (2.0000, 3.0000) and (3.0000, 4.0000)
+ Closest Distance is: 1.4142
+ INPUT
+ 8
+ 3 1
+ 0 2
+ 0 9
+ 2 5
+ 4 4
+ 5 7
+ 7 4
+ 7 1
+ OUTPUT
+ Closest Points are (2.0000, 5.0000) and (4.0000, 4.0000)
+ Closest Distance is: 2.2361
+```
+
+---
+
+এবার অন্য একটি এলগরিদম বা মেথড দিয়ে Closest Pair বের করার চেষ্টা করবো । এই মেথডের নাম হল Sweep Line মেথড । এই মেথড অনুসারে একটি উলম্ব কাল্পনিক লাইন পয়েন্টগুলোর বাম থেকে ডানে যাবে এবং সবগুলো পয়েন্টকে প্রসেস করবে, সেই সাথে আমাদের সবচেয়ে নিকটবর্তী পয়েন্টজোড় পেয়ে যাব । উলম্ব কাল্পনিক লাইনের বামে থাকা পয়েন্টগুলোর মধ্যে নিকটবর্তী পয়েন্টজোড় আমদের বের করে ফেলতে হবে । ও আচ্ছা, বাইনারি সার্চ ট্রি কি তা জানে আছে তো ? যদিও বাইনারি সার্চ ট্রি এখানে ইমপ্লিমেন্ট করার প্রয়োজন নেয় তারপরও ভুলে গেলে আবার দেখে নাও, না জানা থাকলে জেনে নাও । আমরা STL এর সেট দিয়েই কাজ সেরে ফেলতে পারবো । এখন চলো ধাপে ধাপে কিছু পয়েন্ট নিয়ে এলগরিদমটি বুঝার চেষ্টা করি ।
+
+পূর্বের মতো প্রথমেই পয়েন্টগুলো এদের এক্স-স্থানাঙ্কের সাপেক্ষে সর্ট করতে হবে । ধরে নেই, কিছু পয়েন্ট সর্ট করার পর নিচের মতো হল ঃ
+![](given%20points.png)
+
+প্রথমে সুইপ লাইন (উলম্ব কাল্পনিক লাইন) থাকবে পয়েন্টগুলোর বামদিকে । যখনই সুইপ লাইন কোনও পয়েন্টের উপর পরবে তখনই কিছু নির্দিষ্ট কাজ করতে হবে যেগুলোর মাধ্যমে সুইপ লাইনের বামে থাকা পয়েন্টগুলোর মধ্যে সর্বনিম্ন দূরত্ব আমরা পেয়ে যাব । তাহলে উপরের পয়েন্টগুলো কি অর্ডারে প্রসেস হবে ? সর্ট করে যে অর্ডার পেয়েছি সেই অর্ডারেই হবে । এক কথায় বলা যায় এখন আর উলম্ব কাল্পনিক লাইন কল্পনা না করলেও হবে । তারপরও দেখি সুইপ লাইন কিভাবে বাম থেকে ডানে যাচ্ছে –
+
+![](1st%20sweep%20line.png)   ![](2nd%20Sweep%20Line.png)   ![](3rd%20Sweep%20Line.png)
+![](4th%20Sweep%20Line.png)   ![](5th%20sweep%20line.png)   ![](6th%20sweep%20line.png)
+
+এখন দেখি, প্রতিটি পয়েন্টের জন্য আমাদের কি কি কাজ করতে হবে ? তার আগে বলে নেই আমাদের লাগবে একটি সেট (candidates) যেখানে পয়েন্টগুলো ওআই-স্থানাকের সাপেক্ষে সর্টেড অবস্থায় থাকবে । আর বর্তমান সর্বনিম্ন দূরত্ব ধরে নাও d । প্রতিটি পয়েন্টের (ধরি এখন p পয়েন্টে আছি) জন্য যা করতে হবে তাহলো –
+
+১। candidates সেট থেকে p এর বামে d এর বেশি দূরত্বের পয়েন্টগুলোকে বাদ দিতে হবে ।
+
+২। তাহলে candidates সেটে থাকবে p এর বামে d দূরত্বের মধ্যে থাকা পয়েন্টগুলো । এই পয়েন্টগুলোর মধ্যে p এর থেকে সবচেয়ে কাছের পয়েন্ট খুঁজে বের করতে হবে । যদি p ও সেই পয়েন্টের দূরত্ব বর্তমান সর্বনিম্ন দূরত্ব (d) থেকে কম হয় তাহলে d এর মান আপডেট করতে হবে ।
+
+৩। সবশেষে যে পয়েন্টকে প্রসেস করলাম সেটিকে candidates সেটে ইনসার্ট করতে হবে ।
+
+
+
+১ ও ৩ নং তো সহজ কাজ । কিন্তু ২ নং কিভাবে করা যায় ? আপাত দৃষ্টিতে মনে হচ্ছে p এর বামে d দূরত্বের মধ্যে থাকা সবগুলো পয়েন্টের সাথে তুলনা করলে তো এটা নাইভ এলগরিদমই হয়ে গেল । p পয়েন্ট থেকে উপরের দিকে ও নিচের দিকে d দূরত্বের বাইরে থাকা পয়েন্টগুলো বিবেচনা করার কি কোনও প্রয়োজন আছে ? না । p এর বামে ও উপরে-নিচে d দূরত্বের পয়েন্টগুলো বিবেচনা করলেই যথেষ্ট ।
+
+![](d2d%20rectangle.png)
+
+
+তাহলে d * 2d সাইজের একটি আয়তক্ষেত্র তৈরি হল । এখন মজার বিষয় হল আমরা নিশ্চিত করে বলতে পারি এই আয়তক্ষেত্রের মধ্যে সর্বচ্চো ৬ টি পয়েন্ট থাকবে । এই মধ্যে p নিজে একটি । তাই বাকি সর্বচ্চো ৫ টি পয়েন্টের সাথে দূরত্ব বের করে দেখতে হবে । যদি ৬ টির বেশি পয়েন্ট থাকতো তাহলে তাদের যেকোনো দুইটির দূরত্ব বর্তমান দূরত্ব d থেকে কম হতো (কেন কম হবে পরে বলছি, আপাতত ধরে নেই) এবং আরও ছোট একটা আয়তক্ষেত্র পেতাম কারণ আমরা বামদিক থেকে পয়েন্টগুলো প্রসেস করে আসছি ।
+
+৬ টির বেশি পয়েন্ট থাকলে কেন তাদের যেকোনো দুইটির দূরত্ব বর্তমান দূরত্ব d থেকে কম হতো, বুঝতে হলে নিচের চিত্রটি ভালভাবে লক্ষ্য করতে হবে ।
+
+![](6%20point%20explanation%20modified.gif)
+
+
+অনেকে হয়তোবা উপরের চিত্রটি দেখেই বুঝে গেছ... ৬ টির বেশি পয়েন্ট থাকলে তাদের যেকোনো দুইটির দূরত্ব বর্তমান দূরত্ব d থেকে কম হবে । উপরের চিত্রে যেকোনো একটি অংশে একটি পয়েন্ট আছে ধরে নিলে দেখা যাবে অন্য অন্য অনেক অংশে পয়েন্ট থাকতে পারবে না । যেমন A অংশে যদি একটি পয়েন্ট থাকে তাহলে উপরের ভাগে (অর্থাৎ A, B, C, D, I, J অংশে) কোনও পয়েন্ট থাকতে পারবে না । আবার যেমন I অংশে কোনও পয়েন্ট থাকলে 2 ও 6 নং পয়েন্ট থাকতে পারবে না । এভাবে দেখানো যাবে d*2d সাইজের একটি আয়তক্ষেত্রে ৬টির বেশি পয়েন্ট থাকলে যেকোনো দুইটির দূরত্ব d থেকে কম হবে ।
+
+এবার কোড কেমন জটিল হবে দেখা যাক :
+
+```cpp
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <stdio.h>
+#include <math.h>
+#include <float.h>
+#include <set>
+
+using namespace std;
+
+#define EPS 1e-9
+#define SQR(x) ((x)*(x))
+#define INF 99999999
+
+typedef struct {
+    double x, y;
+} Point;
+
+int N;                      // Number of Points given
+Point pnts[10001];
+Point minA, minB;           // two points of closest pair
+double minDist;             // Distance of closest pair
+
+bool compX(Point a, Point b)
+{
+    if(fabs(a.x - b.x) < EPS) return a.y < b.y;
+    return a.x < b.x;
+}
+class SetComparator {
+public:
+    bool operator() (const Point a, const Point b)
+    {
+        if(fabs(a.y - b.y) < EPS) return a.x < b.x;
+        return a.y < b.y;
+    }
+};
+
+void showPnts()
+{
+    for(int i = 1; i <= N; i++) {
+        printf("%lf %lf\n", pnts[i].x, pnts[i].y);
+    }
+}
+
+void sweepLine()
+{
+    int leftMostIndex = 1;                             // Left Most Point Index which is within 'minDist'
+    set<Point, SetComparator> candidates;
+    set<Point, SetComparator>::iterator lowerBound;
+    set<Point, SetComparator>::iterator it;
+    
+    for(int i = 1; i <= N; i++) {
+        Point current = pnts[i];
+        while(current.x - pnts[leftMostIndex].x > minDist) {
+            candidates.erase(pnts[leftMostIndex]);
+            leftMostIndex++;
+        }
+        
+        Point lowerLimit;
+        lowerLimit.x = current.x;
+        lowerLimit.y = current.y - minDist;
+        lowerBound = candidates.lower_bound(lowerLimit);
+        
+        for( it = lowerBound; it->y <= pnts[i].y + minDist && it != candidates.end(); it++ ) {
+            double dist = sqrt(SQR(pnts[i].x - it->x) + SQR(pnts[i].y - it->y));
+            if(dist < minDist) {
+                minDist = dist;
+                
+                minA = pnts[i];
+                minB = *it;
+            }
+            minDist = min(minDist, SQR(pnts[i].x - it->x) + SQR(pnts[i].y - it->y));
+        }
+        candidates.insert(pnts[i]);
+    }
+}
+
+double closestPair(Point p[], int n)
+{
+    minDist = DBL_MAX;
+    sort(p + 1, p + 1 + n, compX);
+    sweepLine();
+}
+int main()
+{
+    //freopen("input.txt", "r", stdin);
+    //freopen("output.txt", "w", stdout);
+    
+    int i, j;
+    while(scanf("%d", &N) == 1) {
+        if(N == 0) break;
+        for(i = 1; i <= N; i++)
+            scanf("%lf %lf", &pnts[i].x, &pnts[i].y);
+        closestPair(pnts, N);
+        
+        if(minDist - 10000.0 > EPS) printf("INFINITY\n");
+        else {
+            printf("Closest Distance is: %.4lf\n", minDist);
+            printf("Closest Points are (%.4lf, %.4lf) and (%.4lf, %.4lf)\n", minA.x, minA.y, minB.x, minB.y);
+        }
+    }
+    return 0;
+}
+/**
+ INPUT
+ 13
+ 1 1
+ 1 5
+ 2 3
+ 3 1
+ 3 4
+ 3 7
+ 4 9
+ 5 7
+ 6 5
+ 9 3
+ 9 8
+ 10 1
+ 12 3
+ OUTPUT
+ Closest Points are (2.0000, 3.0000) and (3.0000, 4.0000)
+ Closest Distance is: 1.4142
+ 
+ INPUT
+ 8
+ 3 1
+ 0 2
+ 0 9
+ 2 5
+ 4 4
+ 5 7
+ 7 4
+ 7 1
+ OUTPUT
+ Closest Points are (4.0000, 4.0000) and (2.0000, 5.0000)
+ Closest Distance is: 2.2361
+ **/
+```

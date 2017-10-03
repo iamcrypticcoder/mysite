@@ -1,6 +1,6 @@
 ---
 title: 'Web Development'
-published: false
+published: true
 body_classes: 'header-lite fullwidth blogstyling'
 menu: 'Web Development'
 content:
