@@ -46,7 +46,18 @@ When x = 3,
 
 Number of co-efficients is increased along with increasing power of binomial. Here is binomial co-efficient table:
 
-`Show table here`
+```
+       0    1    2    3    4    5    6    7
+-------------------------------------------
+0 |    0    0    0    0    0    0    0    0
+1 |    1    1    0    0    0    0    0    0
+2 |    1    2    1    0    0    0    0    0    
+3 |    1    3    3    1    0    0    0    0
+4 |    1    4    6    4    1    0    0    0
+5 |    1    5    10   10   5    1    0    0
+6 |    1    6    15   20   15   6    1    0
+7 |    1    7    21   35   35   21   7    1
+```
 
 Now I am gonna present main content of this article which are properties/identities of binomial coefficient and these properties/identities are quite interesting to me.
 
