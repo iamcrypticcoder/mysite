@@ -8,7 +8,7 @@ content:
         custom:
             - _showcase
 body_classes: 'modular header-image fullwidth'
-menu: Home
+menu: HOME
 onpage_menu: false
 ---
 
