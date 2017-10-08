@@ -1,5 +1,5 @@
 ---
-title: 'UVA-10168 (Summation of four primes)'
+title: 'UVA-10131 (Is Bigger Smarter)'
 published: true
 date: '00:05 11/02/2016'
 taxonomy:
@@ -15,6 +15,11 @@ Here is full code:
 ===
 
 ```cpp
+/*
+    Time :
+    Rank :
+*/
+
 #include <set>
 #include <map>
 #include <list>
@@ -81,72 +86,78 @@ int dy[] = {0, 0, -1, 1};
 
 inline int src() { int ret; scanf("%d", &ret); return ret; }
 
-//---------------------------- GLOBAL VARIABLES ----------------------------
+#define MAX_ELE 1001
 
-#define MAX_PRIME 3163
-bool Flag[MAX_PRIME + 10];    // Take 10 more extra elements
-vector<int> Primes;
-int totalPrimes;
+vector<PII> eles, sorted;
+int L[MAX_ELE], P[MAX_ELE];
+int total, parent;
+int lisLength;
+VI sol;
 
-void Sieve()
+void LIS()
 {
-   int i = 2, j;
+   int i, j;
 
-   int root = (int)sqrt(MAX_PRIME);
-   while( i <= root ) {
-      for(j = i+i; j <= MAX_PRIME; j += i) Flag[j] = 1;
-      for(++i; Flag[i]; i++);
+   FOR(i, 0, 1000) {
+      L[i] = 1;
+      P[i] = 0;
    }
-   Primes.push_back(2);
-	for(i = 3; i <= MAX_PRIME; i += 2)  // i+=2 ?? there is no consecutive prime except 2,3
-		if(Flag[i] == 0)
-			Primes.push_back(i);
-   totalPrimes = Primes.size();
-}
-bool IsPrime(long long N)
-{
-   if(N < 2) return 0;
-   if(N <= MAX_PRIME) return (!Flag[N]);
-   int root = sqrt((double)N);
 
-   for(int i=0; Primes[i] <= root; i++)
-      if(N % Primes[i] == 0) return 0;
-   return 1;
+   parent = lisLength = 0;
+
+   FOR(i, 1, sorted.SZ-1)
+      FOR(j, i+1, sorted.SZ-1)
+         if(sorted[j].ff > sorted[i].ff && sorted[j].ss < sorted[i].ss) {
+            if(L[i] + 1 > L[j]) {
+               L[j] = L[i] + 1;
+               P[j] = i;
+               if(L[j] > lisLength) {
+                  lisLength = L[j];
+                  parent = j;
+               }
+            }
+         }
+}
+
+void PrintLIS(int n)
+{
+   if(n == 0) return;
+   PrintLIS(P[n]);
+   sol.PB(n);
+   //printf("%d\n", n);
+}
+
+bool comp(PII a, PII b)
+{
+   if(a.ff == b.ff) return a.ss > b.ss;
+   return a.ff < b.ff;
 }
 
 int main()
 {
-//    READ("input.txt");
+    READ("input.txt");
 //    WRITE("output.txt");
    int i, j, k;
    int TC, tc;
-   int N;
+   int w, iq;
 
-   Sieve();
+   eles.PB(PII(123456, 123456));     // To start index at 1.
+   sorted.PB(PII(123456, 123456));
+   while(scanf("%d %d", &w, &iq) != EOF) {
+      eles.PB(PII(w, iq));
+      sorted.PB(PII(w, iq));
+   }
+   sort(sorted.begin()+1, sorted.end(), comp);
+   LIS();
+   printf("%d\n", lisLength);
+   PrintLIS(parent);
 
-   while(cin >> N) {
-
-      if(N < 8) {
-         cout << "Impossible.\n";
-         continue;
-      }
-
-      if(N % 2 == 0) {
-         cout << 2 << " " << 2 << " ";
-         N = N - 4;
-      }
-      else {
-         cout << 2 << " " << 3 << " ";
-         N = N - 5;
-      }
-
-      for(i=0; i < totalPrimes; i++) {
-         if(IsPrime(N - Primes[i])) {
-            cout << Primes[i] << " " << N - Primes[i] << endl;
+   FOR(i, 0, sol.SZ-1) {
+      FOR(j, 1, eles.SZ-1)
+         if(sorted[sol[i]].ff == eles[j].ff && sorted[sol[i]].ss == eles[j].ss) {
+            printf("%d\n", j);
             break;
          }
-      }
-
    }
 
    return 0;
