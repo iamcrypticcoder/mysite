@@ -15,5 +15,20 @@ Here is full code:
 ===
 
 ```cpp
+#include <iostream>
+#include <vector>
+#include <cmath>
 
+using namespace std;
+
+int main()
+{
+	unsigned int num1, num2, result;
+
+	while(cin >> num1 >> num2) {
+		result = num1 ^ num2;
+		cout << result << "\n";
+	}
+	return 0;
+}
 ```
