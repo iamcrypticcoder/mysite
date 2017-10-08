@@ -1,5 +1,5 @@
 ---
-title: 'LIGHTOJ-1211 (Intersection of Cubes)'
+title: 'LIGHTOJ-1245 (Harmonic Number (II))'
 published: true
 date: '00:05 11/02/2016'
 taxonomy:
@@ -58,7 +58,6 @@ using namespace std;
 #define OFF_BIT(mask, i) (mask &= NEG_BITS(1 << i))
 
 typedef long long LL;
-typedef unsigned long long ULL;
 typedef vector<char> VC;
 typedef vector<vector<char> > VVC;
 typedef vector<int> VI;
@@ -71,8 +70,7 @@ typedef map<int, int> MII;
 typedef map<char, int> MCI;
 typedef map<string, int> MSI;
 
-int GCD(int a,int b) {   while(b)b^=a^=b^=a%=b;  return a;   }
-int LCM(int a,int b) {   return a / GCD(a, b) * b;   }
+int GCD(int a,int b){   while(b)b^=a^=b^=a%=b;  return a;   }
 
 #define WHITE 0
 #define GRAY 1
@@ -85,10 +83,6 @@ inline int src() { int ret; scanf("%d", &ret); return ret; }
 
 //---------------------------- GLOBAL VARIABLES ----------------------------
 
-int minX, maxX;
-int minY, maxY;
-int minZ, maxZ;
-
 int main()
 {
 //    READ("input.txt");
@@ -96,29 +90,30 @@ int main()
    int i, j, k;
    int TC, tc;
    int N;
-   int x1, x2, y1, y2, z1, z2;
-   TC = src();
+
+   scanf("%d", &TC);
 
    FOR(tc, 1, TC) {
-      scanf("%d", &N);
+      scanf("%ld",&N);
 
-      minX = minY = minZ = INF;
-      maxX = maxY = maxZ = -1;
+      int root = (int)sqrt(N);
+
+      long long low, high = N;
+      long long sum = 0;
 
       FOR(i, 1, N) {
-         scanf("%d %d %d %d %d %d", &x1, &y1, &z1, &x2, &y2, &z2);
-         if(x1 > maxX) maxX = x1;
-         if(y1 > maxY) maxY = y1;
-         if(z1 > maxZ) maxZ = z1;
-
-         if(x2 < minX) minX = x2;
-         if(y2 < minY) minY = y2;
-         if(z2 < minZ) minZ = z2;
+         low = N / i;
+         if(low < i) {
+            sum += (high - low) * (i-1);
+            break;
+         }
+         sum += low;
+         sum += (high - low) * (i - 1);
+         high = low;
+         if(low == i) break;
       }
 
-      int ans = (minX - maxX) * (minY - maxY) * (minZ - maxZ);
-      if(ans < 0) ans = 0;
-      printf("Case %d: %d\n", tc, ans);
+      printf("Case %d: %lld\n", tc, sum);
    }
 
    return 0;
